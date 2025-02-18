@@ -121,7 +121,7 @@ forecaster.fit(y, x_teorico)
 
 # Período de previsão fora da amostra
 periodo_previsao = pd.date_range(
-    start = forecaster.last_window.index[1] + pd.offsets.MonthBegin(1),
+    start = forecaster.last_window.index[0] + pd.offsets.MonthBegin(1),
     end = forecaster.last_window.index[1] + pd.offsets.MonthBegin(h),
     freq = "MS"
     )
